@@ -11,9 +11,7 @@ jobs:
     name: Run Terraform
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: Day-2-introduction
+   
 
     steps:
       - name: Checkout code
