@@ -3,9 +3,7 @@ pipeline {
 
     
 
-    parameters {
-        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Choose Terraform action')
-    }
+  
 
     stages {
         stage('Git Checkout') {
@@ -30,14 +28,7 @@ pipeline {
             }
         }
 
-        stage('Terraform Apply/Destroy') {
-            steps {
-                echo "⚙️ Running: terraform ${params.action} ..."
-              
-                    sh "terraform ${params.action} -auto-approve"
-                
-            }
-        }
+        
     }
 
     post {
